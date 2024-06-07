@@ -1,0 +1,107 @@
+@font-face {
+    font-family: "Super Sunday";
+    src: url("../fonts/super-sunday.ttf") format("opentype");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: linear-gradient(to top, transparent, rgba(0, 0, 0, 0.7) 90%);
+    z-index: 1;
+}
+
+.logo img {
+    width: 100px;
+    height: auto;
+    filter: brightness(100%);
+}
+
+.links {
+    display: flex;
+    gap: 15px;
+}
+
+.contact-link,
+.about-us-link {
+    font-family: Helvetica, sans-serif;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-link:hover,
+.about-us-link:hover {
+    text-decoration: underline;
+}
+
+.container {
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background: linear-gradient(to bottom, transparent, rgba(4, 0, 27, 0.7) 75%);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.register-button {
+    font-family: "Super Sunday", sans-serif;
+    padding: 15px 0;
+    width: calc(900px);
+    max-width: 900px;
+    background-color: #53a7df;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    font-size: 35px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 20px;
+}
+
+.register-button:hover {
+    background-color: #c71d86;
+    box-shadow: 0 0 20px rgb(194, 16, 105);
+}
+
+.login-link {
+    text-decoration: none;
+    color: #53a7df;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.login-link:hover {
+    color: #a8c9df;
+    text-decoration: underline;
+}
