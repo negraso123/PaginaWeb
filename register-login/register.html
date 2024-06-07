@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../css/styles-register.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap">
+  <title>Registro</title>
+  <link rel="icon" type="image/jpg" href="https://cdn.discordapp.com/attachments/1063847894286880869/1243582442833444944/loguito_prueba.png?ex=6651ffe7&is=6650ae67&hm=c4f62b00e53629877ad0feabc308d719ec26ac629734c9a79198bd585ca4950b&">
+</head>
+<body>
+  <video class="background-video" autoplay loop muted playsinline>
+    <source src="/videos/perro 2.mp4" type="video/mp4">
+    Tu navegador no soporta el elemento de video.
+  </video>
+  <audio autoplay loop>
+    <source src="../musica/musica-register.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+  <section class="form-register">
+    <h4>REGISTRO</h4>
+    <form id="register-form">
+      <input class="controls" type="text" name="nombres" id="nombres" placeholder="Nombre">
+      <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Apellido">
+      <input class="controls" type="text" name="nombre-mascota" id="nombre-mascota" placeholder="Nombre de la Mascota">
+      <input class="controls" type="email" name="correo" id="correo" placeholder="Correo Electronico">
+      <input class="controls" type="password" name="contrasena" id="contrasena" placeholder="Contraseña">
+      <input class="controls" type="password" name="confirmar-contrasena" id="confirmar-contrasena" placeholder="Confirmar Contraseña">
+      <input class="boton-login" type="submit" value="REGISTRARSE">
+    </form>
+    <p class="montserrat-font"><a href="login.html">¿Ya tienes una cuenta?</a></p>
+    <p id="error-message" class="montserrat-font" style="color: red; display: none;">Complete todos los campos.</p>
+  </section>
+
+  <script>
+    document.getElementById('register-form').addEventListener('submit', function(event) {
+      event.preventDefault(); 
+
+      var nombres = document.getElementById('nombres').value;
+      var apellidos = document.getElementById('apellidos').value;
+      var nombreMascota = document.getElementById('nombre-mascota').value;
+      var correo = document.getElementById('correo').value;
+      var contrasena = document.getElementById('contrasena').value;
+      var confirmarContrasena = document.getElementById('confirmar-contrasena').value;
+
+      if (nombres && apellidos && nombreMascota && correo && contrasena && confirmarContrasena && contrasena === confirmarContrasena) {
+        window.location.href = 'login.html';
+      } else {
+        document.getElementById('error-message').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
