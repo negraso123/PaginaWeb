@@ -40,5 +40,64 @@
 		</div>
 	</div>
 </body>
+<body>
+    <h1>Escoja al perro</h1>
+    <div class="mascota-selector" id="mascota-container">
+        <!-- mascotaes iniciales -->
+        <div class="mascota" onclick="selectmascota('mascota1')">
+            <img src="mascota1.png" alt="">
+        </div>
+        <div class="mascota" onclick="selectmascota('mascota2')">
+            <img src="mascota2.png" alt="">
+        </div>
+        <div class="mascota" onclick="selectmascota('mascota3')">
+            <img src="mascota3.png" alt="">
+        </div>
+    </div>
+
+    <div class="upload-form">
+        <input type="file" id="fileInput" accept="image/*">
+        <button onclick="addmascota()">Agregar perro</button>
+    </div>
+
+    <script>
+        function selectmascota(mascotaId) {
+            // Remove 'selected' class from all mascotas
+            const mascotas = document.querySelectorAll('.mascota');
+            mascotas.forEach(mascota => mascota.classList.remove('selected'));
+
+            // Add 'selected' class to the clicked mascota
+            const selectedmascota = document.querySelector(`.mascota img[alt="${mascotaId}"]`).parentElement;
+            selectedmascota.classList.add('selected');
+        }
+
+        function addmascota() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+            if (file && file.type.startsWith('image/')) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    const imgSrc = event.target.result;
+                    const newmascota = document.createElement('div');
+                    newmascota.classList.add('mascota');
+                    newmascota.onclick = function() { selectmascota(imgSrc); };
+
+                    const imgElement = document.createElement('img');
+                    imgElement.src = imgSrc;
+                    imgElement.alt = ''; // No text for alt attribute
+                    
+                    newmascota.appendChild(imgElement);
+                    document.getElementById('mascota-container').appendChild(newmascota);
+                    
+                    // Clear the file input
+                    fileInput.value = '';
+                };
+                reader.readAsDataURL(file);
+            } else {
+                alert('Por favor, selecciona una imagen válida.');
+            }
+        }
+    </script>
+</body>
 </html>
 

@@ -150,76 +150,64 @@ body {
 	color: black;
 	border-radius: 10px;
 }
-container {
-	width: 300px; /* Ancho del contenedor */
-	padding: 20px;
-	background-color: #f0f0f0;
-	border-radius: 10px; /* Borde redondeado para el contenedor */
-	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para un efecto visual */
-	text-align: center; /* Centrar contenido */
-	margin: 20px auto; /* Centrar el contenedor en la página */
+
+.avatar-selector {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 15px;
+	margin-bottom: 20px;
 }
-.image-container {
-	width: 150px; /* Ancho de la imagen */
-	height: 150px; /* Altura de la imagen */
-	border: 5px solid #ff4500; /* Color y grosor del borde exterior */
-	border-radius: 50%; /* Borde redondeado para la imagen */
-	padding: 5px; /* Espacio alrededor de la imagen */
-	background: linear-gradient(45deg, #ff6b6b, #f7ff00); /* Fondo degradado */
-	margin: 0 auto; /* Centrar la imagen dentro del contenedor */
+
+.avatar {
+	border: 3px solid transparent;
+	border-radius: 50%;
+	padding: 5px;
+	cursor: pointer;
+	transition: border-color 0.3s, transform 0.3s;
 }
-.image-container img {
-	width: 100%; /* Asegurar que la imagen llene el contenedor */
-	height: 100%; /* Asegurar que la imagen llene el contenedor */
-	border-radius: 50%; /* Borde redondeado para la imagen */
-	object-fit: cover; /* Ajuste de la imagen */
+
+.avatar img {
+	border-radius: 50%;
+	width: 120px;
+	height: 120px;
+	object-fit: cover;
 }
-.skill-box {
-	width: 100%;
+
+.avatar:hover {
+	transform: scale(1.05);
+}
+
+.avatar.selected {
+	border-color: #007bff;
+}
+
+.upload-form {
 	margin-top: 20px;
+	padding: 15px;
+	background-color: #fff;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	display: inline-block;
 }
-.skill-box .titulo {
-	display: block;
-	font-size: 14px;
-	font-weight: 600;
-	color: #333;
-	margin-bottom: 5px;
+
+.upload-form input[type="file"] {
+	margin-right: 10px;
 }
-.skill-box .skill-bar {
-	height: 8px;
-	width: 100%;
-	border-radius: 6px;
-	background: rgba(0, 0, 0, 0.1);
-	margin-bottom: 10px;
-}
-.skill-bar .skill-per {
-	position: relative;
-	display: block;
-	height: 100%;
-	border-radius: 6px;
-	background: rgba(18, 0, 119, 0.4);
-	opacity: 1;
-}
-.skill-per .tooltip {
-	position: absolute;
-	right: -14px;
-	top: -28px;
-	font-size: 9px;
-	font-weight: 500;
+
+.upload-form button {
+	background-color: #007bff;
 	color: #fff;
-	padding: 2px 6px;
-	border-radius: 3px;
-	background: #4070f4;
-	z-index: 1;
+	border: none;
+	border-radius: 5px;
+	padding: 10px 20px;
+	cursor: pointer;
+	font-size: 16px;
+	transition: background-color 0.3s;
 }
-.tooltip::before {
-	content: '';
-	position: absolute;
-	left: 50%;
-	bottom: -2px;
-	height: 10px;
-	width: 10px;
-	z-index: -1;
-	background-color: #4070f4;
-	transform: translateX(-50%) rotate(45deg);
+
+.upload-form button:hover {
+	background-color: #0056b3;
 }
+
+

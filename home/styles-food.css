@@ -220,15 +220,6 @@ body {
 	transform: translateX(-50%) rotate(45deg);
 }
 /*DISPENsER DE COMIDA*/
-body {	font-family: 'Roboto', sans-serif;
-	background-color: #f0f0f0;
-	padding: 20px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 100vh;
-	margin: 0;
-}
 .comida {
 	position: relative; 
 	max-width: 500px;
