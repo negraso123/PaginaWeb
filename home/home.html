@@ -1,45 +1,45 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-	<meta charset="UTF-8">
-	<title>PetPal Interactive</title>
-	<link rel="stylesheet" href="styles-home.css">
+    <meta charset="UTF-8">
+    <title>PetPal Interactive</title>
+    <link rel="stylesheet" href="styles-home.css">
 </head>
 <body>
-	<header class="header">
-		<div class="container">
-			<div class="btn-menu">
-				<label for="btn-menu">☰</label>
-			</div>
-			<div class="logotipo">
-				<img src="https://media.discordapp.net/attachments/1063847894286880869/1268935923601768568/PETPAL_blanco.png?ex=66ae3c2b&is=66aceaab&hm=38cfcf9ab5ecaa125a435e8b4817c737f0b7630c6a92b0ed13c6d722352e04b6&=&format=webp&quality=lossless&width=463&height=468**" width="100" height="80">	
-			</div>
-			<div class="logo">
-				<h1>PetPal Interactive</h1>
-			</div>
-			<nav class="menu">
-				<a href="#">Inicio</a>
-				<a href="#">Ayuda</a> 
-				<a href="#">Preguntas Frecuente</a>
-			</nav>
-		</div>
-	</header>
-	<div class="capa"></div>
-	<!-- --------------->
-	<input type="checkbox" id="btn-menu">
-	<div class="container-menu">
-		<div class="cont-menu">
-			<nav>
-				<a href="select.html">Seleccionar mascota</a>
-				<a href="mensage.html">Grabar mensaje</a>
-				<a href="food.html">Dispensar comida y/o agua</a>
-				<a href="entreteiment.html">Entretenimiento</a>
-				<a href="#">Apagar sistema</a>
-			</nav>
-			<label for="btn-menu">✖️</label>
-		</div>
-	</div>
+    <header class="header">
+        <div class="container">
+            <div class="btn-menu">
+
+                <label for="btn-menu">
+                    <img src="https://media.discordapp.net/attachments/1063847894286880869/1268935923601768568/PETPAL_blanco.png?ex=66b6cdeb&is=66b57c6b&hm=138bd39017bd0aa3be3daf22f0fa732b580d74e3b6d0ba82faa5512d2ca03ff4&=&format=webp&quality=lossless&width=463&height=468" alt="Logo">
+                </label>
+            </div>
+            <nav class="menu">
+                <a href="#">Inicio</a>
+                <a href="#">Ayuda</a> 
+                <a href="#">Preguntas Frecuentes</a>
+            </nav>
+        </div>
+    </header>
+    <div class="capa"></div>
+    <input type="checkbox" id="btn-menu">
+    <div class="container-menu">
+        <div class="cont-menu">
+            <nav>
+                <a href="select.html">Seleccionar mascota</a>
+                <a href="mensage.html">Grabar mensaje</a>
+                <a href="food.html">Dispensar comida y/o agua</a>
+                <a href="entreteiment.html">Entretenimiento</a>
+                <a href="#">Apagar sistema</a>
+            </nav>
+            <label for="btn-menu" class="close-btn">⮌</label>
+        </div>
+    </div>
+
+    <script>
+        document.querySelector('.capa').addEventListener('click', function() {
+            document.getElementById('btn-menu').checked = false;
+        });
+    </script>
 </body>
 </html>
-
-
