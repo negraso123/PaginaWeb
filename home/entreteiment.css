@@ -150,7 +150,44 @@ body {
 	color: black;
 	border-radius: 10px;
 }
-
-
-
-
+.contenedor{
+	
+	width: 300px;
+	height: 300px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #ffffff;
+	border: 3px solid #00796b; /* Borde verde oscuro */
+	border-radius: 15px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+	padding: 20px;
+	box-sizing: border-box;
+	align-items: center;
+	
+}
+.buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+.button {
+	padding: 15px;
+	border: none;
+	border-radius: 8px;
+	color: #ffffff;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease;
+}
+.button:hover {
+	transform: scale(1.05);
+}
+.block-button {
+	background-color: #007bff; /* Azul brillante */
+}
+.eject-button {
+	background-color: #28a745; /* Verde brillante */
+}
