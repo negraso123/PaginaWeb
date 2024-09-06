@@ -16,7 +16,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: left;
-    min-height: 100vh; /* Asegura que el fondo cubra al menos la altura de la pantalla */
+    min-height: 100vh;
 }
 
 .capa {
@@ -35,171 +35,39 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background: rgb(18, 219, 85);
+    background: rgb(80, 200, 120);
     padding: 10px;
     display: flex;
-    align-items: center; /* Alinea verticalmente al centro */
-    justify-content: flex-start; /* Alinea el contenido al inicio (izquierda) */
+    align-items: center;
+    justify-content: space-between;
 }
 
 .container {
     display: flex;
     align-items: center;
-    gap: 10px;
-    width: auto;
-    max-width: 1200px;
-    margin: 930px;
-    justify-content: flex-start; /* Alinea el contenido al inicio (izquierda) */
-}
-
-.container .btn-menu {
-    cursor: pointer; /* Cambia el cursor al pasar por encima del logo */
-    margin-left: 50px; /* Ajusta la posición del logo desde el margen izquierdo */
-}
-
-.container .btn-menu img {
-    height: 60px; /* Ajusta la altura del logo para que se vea bien en el header */
-    width: auto;  /* Mantiene la proporción del logo */
-}
-
-.container .menu {
-    margin-left: auto; /* Empuja el menú a la derecha */
-    line-height: 80px;
-}
-
-.container .menu a {
-    display: inline-block;
-    padding: 15px;
-    line-height: normal;
-    text-decoration: none;
-    color: #fff;
-    transition: all 0.3s ease;
-    border-bottom: 2px solid transparent;
-    font-size: 15px;
-    margin-right: 5px;
-}
-
-.container .menu a:hover {
-    border-bottom: 2px solid #c7c7c7;
-    padding-bottom: 5px;
-}
-
-#btn-menu {
-    display: none;
-}
-
-#btn-menu:checked ~ .container-menu {
-    opacity: 1;
-    visibility: visible;
-}
-
-.cont-menu {
     width: 100%;
-    max-width: 250px;
-    background: rgb(18, 219, 85);
-    height: 100vh;
-    position: relative;
-    transition: all 500ms ease;
-    transform: translateX(-100%);
-}
-
-#btn-menu:checked ~ .container-menu .cont-menu {
-    transform: translateX(0%);
-}
-
-.cont-menu nav {
-    transform: translateY(15%);
-}
-
-.cont-menu nav a {
-    display: block;
-    text-decoration: none;
-    padding: 20px;
-    color: #ffffff;
-    border-left: 5px solid transparent;
-    transition: all 400ms ease;
-    font-family: "Super Sunday", sans-serif; /* Aplica la fuente "Super Sunday" */
-}
-
-.cont-menu nav a:hover {
-    border-left: 5px solid #e4e4e4;
-    background: #089c4198;
-}
-
-.cont-menu label {
-    position: absolute;
-    right: 5px;
-    top: 10px;
-    color: #fff;
-    cursor: pointer;
-    font-size: 18px;
-}@font-face {
-    font-family: "Super Sunday";
-    src: url("../../fonts/super-sunday.ttf") format("opentype");
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat Alternates', sans-serif;
-}
-
-body {
-    font-family: "Super Sunday", sans-serif;
-    background-image: url('https://media.discordapp.net/attachments/1063847894286880869/1271447442511892593/fotor-ai-2024080991640.jpg?ex=66b75f34&is=66b60db4&hm=701a5828aab972eb055e010a029503e2d1e037a64c15c44049cdbf1ced7988f8&=&format=webp&width=819&height=468');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: left;
-    min-height: 100vh; /* Asegura que el fondo cubra al menos la altura de la pantalla */
-}
-
-.capa {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: -1;
-    top: 0;
-    left: 0;
-}
-
-.header {
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgb(127, 4, 158);
-    padding: 10px;
-    display: flex;
-    align-items: center; /* Alinea verticalmente al centro */
-    justify-content: space-between; /* Alinea el logo a la izquierda y el menú a la derecha */
-}
-
-.container {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    width: auto;
-    max-width: 1200px;
-    margin: 930px;
     justify-content: space-between;
 }
 
 .container .btn-menu {
     cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
-.container .btn-menu img {
-    height: 60px;
-    width: auto;
+.container .btn-menu .menu-icon {
+    font-size: 30px;
+    color: #ffffff;
+    margin-left: 10px;
+    cursor: pointer;
 }
 
 .container .menu {
-    display: contents ; /* Alinea los enlaces horizontalmente */
-    gap: 15px; /* Espacio entre los enlaces */
-    align-items: right; 
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: right;
+    width: 100%;
 }
 
 .container .menu a {
@@ -211,11 +79,16 @@ body {
     transition: all 0.3s ease;
     border-bottom: 2px solid transparent;
     font-size: 15px;
-    font-family: "Super Sunday", sans-serif; 
+    font-family: "Super Sunday", sans-serif;
+}
+
+.container .menu a img.logo {
+    height: 50px;
+    width: auto;
 }
 
 .container .menu a:hover {
-    border-bottom: 2px solid #c7c7c7;
+    border-bottom: 2px solid rgb(50, 150, 90);
     padding-bottom: 5px;
 }
 
@@ -231,7 +104,7 @@ body {
 .cont-menu {
     width: 100%;
     max-width: 250px;
-    background: rgb(127, 4, 158);
+    background: rgb(80, 200, 120);
     height: 100vh;
     position: relative;
     transition: all 500ms ease;
@@ -250,15 +123,16 @@ body {
     display: block;
     text-decoration: none;
     padding: 20px;
-    color: #ffffff;
+    color: rgb(245, 245, 245);
     border-left: 5px solid transparent;
     transition: all 400ms ease;
-    font-family: "Super Sunday", sans-serif; /* Aplica la fuente "Super Sunday" */
+    font-family: "Super Sunday", sans-serif;
 }
 
 .cont-menu nav a:hover {
-    border-left: 5px solid #c7c7c7;
-    background: rgb(91, 4, 112);
+    border-left: 5px solid rgb(50, 150, 90);
+    background: rgb(150, 255, 180);
+    color: rgb(30, 30, 30)
 }
 
 .cont-menu label {
@@ -271,10 +145,5 @@ body {
 }
 
 .container .btn-menu:hover img {
-    cursor: pointer; /* Cambia el cursor al pasar por encima del logo */
-}
-
-
-.container .btn-menu:hover img {
-    cursor: pointer; /* Cambia el cursor al pasar por encima del logo */
+    cursor: pointer;
 }

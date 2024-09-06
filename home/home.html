@@ -9,15 +9,15 @@
     <header class="header">
         <div class="container">
             <div class="btn-menu">
-
-                <label for="btn-menu">
-                    <img src="https://media.discordapp.net/attachments/1063847894286880869/1268935923601768568/PETPAL_blanco.png?ex=66b6cdeb&is=66b57c6b&hm=138bd39017bd0aa3be3daf22f0fa732b580d74e3b6d0ba82faa5512d2ca03ff4&=&format=webp&quality=lossless&width=463&height=468" alt="Logo">
-                </label>
+                <label for="btn-menu" class="menu-icon">☰</label>
             </div>
             <nav class="menu">
                 <a href="home.html">Inicio</a>
                 <a href="#">Ayuda</a> 
                 <a href="#">Preguntas Frecuentes</a>
+                <a href="#">
+                    <img src="https://media.discordapp.net/attachments/1063847894286880869/1279079842729427004/PETPAL_blanco.png?ex=66d3236e&is=66d1d1ee&hm=dd7765570e7ea357f849ada93e2cd85913715a3229d6aca2b01c1b2eb37aced2&=&format=webp&quality=lossless&width=463&height=468" alt="PetPal Logo" class="logo">
+                </a>
             </nav>
         </div>
     </header>
@@ -30,7 +30,7 @@
                 <a href="mensage.html">Grabar mensaje</a>
                 <a href="food.html">Dispensar comida y/o agua</a>
                 <a href="entreteiment.html">Entretenimiento</a>
-                <a href="#">Apagar sistema</a>
+                <a href="apagar.html">Apagar sistema</a>
             </nav>
             <label for="btn-menu" class="close-btn">⮌</label>
         </div>
@@ -39,6 +39,17 @@
     <script>
         document.querySelector('.capa').addEventListener('click', function() {
             document.getElementById('btn-menu').checked = false;
+        });
+
+        const btnMenu = document.querySelector('.btn-menu');
+        const menuCheckbox = document.getElementById('btn-menu');
+
+        menuCheckbox.addEventListener('change', function() {
+            if (menuCheckbox.checked) {
+                btnMenu.style.display = 'none';
+            } else {
+                btnMenu.style.display = 'block';
+            }
         });
     </script>
 </body>
